@@ -1,0 +1,20 @@
+class Livro:
+    def __init__(self,titulo,autor,categoria,ano,editora='Sem Editora'):
+        self.titulo = titulo
+        self.autor = autor
+        self.categoria = categoria
+        self.ano = ano
+        self.editora = editora
+        self.ativo = False
+
+#lista de livros inicial
+livro1 = livro('1984','George Orwell','Ficção',1949)
+livro2 = livro('O Senhor dos Aneis','J.R.R. Tolkien','Fantasia',1954)
+livro3 = livro('Don Casmurro','Machado de Assis','Romance',1899)
+lista = [livro1,livro2,livro3]
+
+
+@app.route('/criar', methods=['POST'])
+def criar():
+    titulo = request.form['titulo']
+    
